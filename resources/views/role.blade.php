@@ -94,7 +94,7 @@
 
 
                         <div id="mycontent_detail">
-                            @if (isset($products) == null)
+                            @if (isset($roles) == null)
 
                             @else
                                 @include('role_permissiontable')

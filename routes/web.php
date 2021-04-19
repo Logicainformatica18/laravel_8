@@ -64,7 +64,7 @@ Route::get('/', function () {
     Route::post('customerDestroy',[App\Http\Controllers\CustomerController::class, 'destroy']);
     Route::post('customerShow',[App\Http\Controllers\CustomerController::class, 'show']);
 
-   
+
     Route::resource('usuarios', App\Http\Controllers\UserController::class);
     Route::post('userCreate', 'UserController@create');
     Route::post('userStore', [App\Http\Controllers\UserController::class, 'store']);
@@ -85,9 +85,9 @@ Route::get('/', function () {
     Route::post('roleDestroy',[App\Http\Controllers\RoleController::class, 'destroy']);
     Route::post('roleShow',[App\Http\Controllers\RoleController::class, 'show']);
 
-    Route::post('rolePermissionStore',"RolesController@rolePermissionStore");
-    Route::post('rolePermissionEdit',"RolesController@rolePermissionEdit");
-    Route::post('rolePermissionDestroy',"RolesController@rolePermissionDestroy");
+    Route::post('rolePermissionStore',[App\Http\Controllers\RolePermissionController::class,'store']);
+    Route::post('rolePermissionEdit',[App\Http\Controllers\RolePermissionController::class,'edit']);
+    Route::post('rolePermissionDestroy',[App\Http\Controllers\RolePermissionController::class,'destroy']);
 
     Route::resource("distribuciones", App\Http\Controllers\DistributionController::class);
     Route::post('distributionStore',[App\Http\Controllers\DistributionController::class, 'store']);

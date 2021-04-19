@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-class RolesController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -103,7 +103,8 @@ class RolesController extends Controller
     {
 
         $role = Role::find($request->id);
-        return view("role_permissiontable", compact("role"));
+        //return view("role_permissiontable", compact("role"));
+        return "hola";
     }
     public function rolePermissionDestroy(Request $request)
     {
